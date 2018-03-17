@@ -1,0 +1,19 @@
+{
+	"LambdaFunctionConfigurations": [
+		{
+			"Id":	"1",
+			"LambdaFunctionArn":	"arn:aws:lambda:us-west-2:721266161153:function:lambda-hello",
+			"Events":	["s3:ObjectCreated:*"],
+			"Filter": {
+				"Key":	{
+					"FilterRules": [
+						{
+							"Name": "suffix",
+							"Value": ".txt"
+						}
+					]
+				}
+			}
+		}
+	]
+}
